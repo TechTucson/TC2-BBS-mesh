@@ -133,6 +133,12 @@ options:
                         MQTT topic to subscribe
 ```
 
+# Extending Functionality
+Let's  start by adding the time Functionality. We'll need to update three files:
+- **config.ini**
+- **message_processing.py**
+- **command_handlers.py**
+I have placed examples of the code in the examples folder.
 
 
 ## Automatically run at boot
@@ -225,12 +231,7 @@ A video of it in use is available on our YouTube channel:
 
 [![TC²-BBS-Mesh](https://img.youtube.com/vi/d6LhY4HoimU/0.jpg)](https://www.youtube.com/watch?v=d6LhY4HoimU)
 
-#### Extending Functionality
-Let's  start by adding the time Functionality. We'll need to update three files:
-- **config.ini**
-- **message_processing.py**
-- **command_handlers.py**
-I have placed examples of the code in the examples folder. 
+
 
 ## Thanks
 
