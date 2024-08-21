@@ -1,14 +1,8 @@
 # TC²-BBS Meshtastic Version
 
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/B0B1OZ22Z)
 
 This is the TC²-BBS system integrated with Meshtastic devices. The system allows for message handling, bulletin boards, mail systems, and a channel directory.
 
-### Docker
-
-If you're a Docker user, TC²-BBS Meshtastic is available on Docker Hub!
-
-[![Docker HUB](https://icon-icons.com/downloadimage.php?id=151885&root=2530/PNG/128/&file=docker_button_icon_151885.png)](https://hub.docker.com/r/thealhu/tc2-bbs-mesh)
 
 ## Setup
 
@@ -230,6 +224,13 @@ Make selections by sending messages based on the letter or number in brackets - 
 A video of it in use is available on our YouTube channel:
 
 [![TC²-BBS-Mesh](https://img.youtube.com/vi/d6LhY4HoimU/0.jpg)](https://www.youtube.com/watch?v=d6LhY4HoimU)
+
+#### Extending Functionality
+Let's  start by adding the time Functionality. We'll need to update three files:
+- **config.ini**
+- **message_processing.py**
+- **command_handlers.py**
+I have placed examples of the code in the examples folder. 
 
 ## Thanks
 
