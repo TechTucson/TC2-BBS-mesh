@@ -3,7 +3,7 @@ import logging
 import random
 import time
 import datetime
- 
+from suntime import Sun, SunTimeException
 
 
 from meshtastic import BROADCAST_NUM
@@ -52,6 +52,8 @@ def build_menu(items, menu_name):
             menu_str += "[T]est\n"    
         elif item.strip() == 'F':
             menu_str += "[F]ortune\n"
+        elif item.strip() == 'D':
+            menu_str += "[D]efine\n"
         elif item.strip() == 'W':
             menu_str += "[W]all of Shame\n"
     return menu_str
@@ -68,6 +70,19 @@ def handle_help_command(sender_id, interface, menu_name=None):
         update_user_state(sender_id, {'command': 'MAIN_MENU', 'step': 1})  # Reset to main menu state
         response = build_menu(main_menu_items, "💾TC² BBS💾")
     send_message(response, sender_id, interface)
+
+def handle_define_command(sender_id, interface):
+    latitude = 32.2540
+    longitude = 110.9742
+    sun = Sun(latitude, longitude)
+# Get today's sunrise and sunset in UTC
+    today_sr = sun.get_sunrise_time()
+    today_ss = sun.get_sunset_time()
+    response_ss = "Sunrise and Sunset in TucsonAZ WIll be Times in UTC"
+
+    send_message(responsere_ss, sender_id, interface)
+    send_message(str(today_sr) , sender_id, interface)
+    send_message(str(today_ss) , sender_id, interface)
 
 def handle_test_command(sender_id, interface, menu_name=None):
     now = datetime.datetime.now()
