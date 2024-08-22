@@ -134,11 +134,14 @@ options:
 ```
 
 # Extending Functionality
+## Time
 Let's  start by adding the time Functionality. We'll need to update three files:
 - **config.ini**
 - **message_processing.py**
 - **command_handlers.py**
 I have placed examples of the code in the examples folder.
+## Sunrise and Sunset 
+Example in folder
 
 
 ## Automatically run at boot
