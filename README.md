@@ -38,8 +38,9 @@ cd TC2-BBS-mes
    ```
 
 2. Set up a Python virtual environment:  
-   ```sh
-  python -m venv venv
+
+    ```sh
+   python -m venv venv  
    ```
 3. Activate the virtual environment:  
     ```sh
