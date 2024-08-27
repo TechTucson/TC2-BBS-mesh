@@ -32,11 +32,12 @@
 ### Installation
 
 1. Clone the repository:
-```
+```sh
 git clone https://github.com/TheCommsChannel/TC2-BBS-mesh.git
 cd TC2-BBS-mes
-   ```sh
-1. Set up a Python virtual environment:  
+   ```
+
+2. Set up a Python virtual environment:  
    ```sh
   python -m venv venv
    ```
