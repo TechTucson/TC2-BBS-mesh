@@ -12,6 +12,11 @@
    ```
    import datetime
    ```
+ - Now let's add an entry to the def(build_menu) function that will conincide with our *T*.
+   ```
+           elif item.strip() == 'T':
+            menu_str += "[T]est\n"
+   ```
 
 ### message_handlers.py
 
