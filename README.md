@@ -1,7 +1,8 @@
-# TC²-BBS Meshtastic Version
+# (TechTucson) TC²-BBS Meshtastic Version
 
+- This is the TC²-BBS system integrated with Meshtastic devices. The system allows for message handling, bulletin boards, mail systems, and a channel directory.
+- TC2 over at https://github.com/TheCommsChannel has done some great work with the TC²-BBS system, this project blends various topics that have interested me for a while, meshtastic, python, and in essence emergency communications. 
 
-This is the TC²-BBS system integrated with Meshtastic devices. The system allows for message handling, bulletin boards, mail systems, and a channel directory.
 
 
 ## Setup
