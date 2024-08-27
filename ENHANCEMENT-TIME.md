@@ -8,6 +8,10 @@
    ```
 - This will enable our new Menu Item
 ### command_handlers.py
+- Let's start by adding at the very top of the document 
+   ```
+   import datetime
+   ```
 
 ### message_handlers.py
 
