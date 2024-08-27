@@ -3,8 +3,9 @@
 ### config.ini
 - Let's scroll down to the utilities_menu_items and add T
   ```
-  utilities_menu_items = S, F, W, X, #T#
+  utilities_menu_items = S, F, W, X, *T*
    ```
+- This will enable our new Menu Item
 ### command_handlers.py
 
 ### message_handlers.py
