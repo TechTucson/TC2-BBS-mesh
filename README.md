@@ -25,6 +25,8 @@
 - Meshtastic
   - I am Using Lora, but you are free to use any device you have or you'd like ( as long as they can run Meshtastic)
 - pypubsub
+- https://github.com/gvanem/Dump1090 (We'll use this for the ADSB Portion)
+- RTL-SDR V3 
 
 
 ### Installation
@@ -33,13 +35,13 @@
 ```
 git clone https://github.com/TheCommsChannel/TC2-BBS-mesh.git
 cd TC2-BBS-mes
-```
+   ```sh
 1. Set up a Python virtual environment:  
-   ```
+   ```sh
   python -m venv venv
    ```
 3. Activate the virtual environment:  
-    ```
+    ```sh
    venv\Scripts\activate  
    ```
 4. Install the required packages:  
