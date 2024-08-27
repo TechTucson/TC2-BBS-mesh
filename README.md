@@ -11,7 +11,8 @@
   - Adding a Bot that tells you the time.
   - Adding a Bot that tells you the sunset/sunrise.
   - Adding some sort of ADSB Functionality
-  - Adding some sort of APRS Functionality    
+  - Adding some sort of APRS Functionality
+- Subsequent README files as well as examples will be added for each of these enhancements 
 
 
 
@@ -36,11 +37,11 @@ cd TC2-BBS-mes
 1. Set up a Python virtual environment:  
    ```
   python -m venv venv
-```
+   ```
 3. Activate the virtual environment:  
-```
+    ```
    venv\Scripts\activate  
-```
+   ```
 4. Install the required packages:  
    
    ```sh
