@@ -27,5 +27,7 @@
     - This function defines the  *now* variable and assigns it a value using the DateTime library (I think that's what it is) that we imported. Followed by sending the message back to the user. There's some formatting but that's not important for now. 
 
 ### message_processing.py
+- Next is to add the function we defined into the message_processing.py, to do this we'll tack on the that import task *from command_handlers import ()* and add our hanle_time_command function.
+  ```from command_handlers import (.....,handle_time_command)```
 
 
