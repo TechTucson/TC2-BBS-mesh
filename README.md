@@ -1,7 +1,17 @@
 # (TechTucson) TC²-BBS Meshtastic Version
 
 - This is the TC²-BBS system integrated with Meshtastic devices. The system allows for message handling, bulletin boards, mail systems, and a channel directory.
-- TC2 over at https://github.com/TheCommsChannel has done some great work with the TC²-BBS system, this project blends various topics that have interested me for a while, meshtastic, python, and in essence emergency communications. 
+- TC2 over at https://github.com/TheCommsChannel has done some great work with the TC²-BBS system, this project blends various topics that have interested me for a while, meshtastic, python, and in essence emergency communications. By interested I mean I consider myself a novice, I figured I would take the opportunity to learn more about these topics by adding functionality to this already great resource.
+- I am adding on top of something that is already built 1:) because why reinvent the wheel 2:) I am learning
+- Inspiration came initially not from TC2 but from this repo: https://github.com/SpudGunMan/meshing-around
+
+## Proposed enhancements
+
+- TC²-BBS already comes with the essentials which include a BBS, Mail, and even JS8 Integration. The Integrations that I am thinking about at the moment are:
+  - Adding a Bot that tells you the time.
+  - Adding a Bot that tells you the sunset/sunrise.
+  - Adding some sort of ADSB Functionality
+  - Adding some sort of APRS Functionality    
 
 
 
