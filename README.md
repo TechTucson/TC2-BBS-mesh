@@ -63,16 +63,12 @@ cd TC2-BBS-mes
    You'll need to open up the config.ini file in a text editor and make your changes following the instructions below
    
    **[interface]**  
-   If using `type = serial` and you have multiple devices connected, you will need to uncomment the `port =` line and enter the port of your device.   
-   
-   Linux Example:  
-   `port = /dev/ttyUSB0`   
+   If using `type = serial` and you have multiple devices connected, you will need to uncomment the `port =` line and enter the port of your device. While the client can use Bluetooth and TCP, we'll focus on a directly connected device. (Through USB)   
    
    Windows Example:  
    `port = COM3`   
    
-   If using type = tcp you will need to uncomment the hostname = 192.168.x.x line and put in the IP address of your Meshtastic device.  
-   
+ 
    **[sync]**  
    Enter a list of other BBS nodes you would like to sync messages and bulletins with. Separate each by comma and no spaces as shown in the example below.   
    You can find the nodeID in the menu under `Radio Configuration > User` for each node, or use this script for getting nodedb data from a device:  
@@ -84,8 +80,8 @@ cd TC2-BBS-mes
    ```ini
    [interface]  
    type = serial  
-   # port = /dev/ttyUSB0  
-   # hostname = 192.168.x.x  
+   port = COM6  
+    
    
    [sync]  
    bbs_nodes = !f53f4abc,!f3abc123  
@@ -142,67 +138,7 @@ Example in folder
 
 ## Automatically run at boot
 
-If you would like to have the script automatically run at boot, follow the steps below:
-
-1. **Edit the service file**
-   
-   First, edit the mesh-bbs.service file using your preferred text editor. The 3 following lines in that file are what we need to edit:
-   
-   ```sh
-   User=pi
-   WorkingDirectory=/home/pi/TC2-BBS-mesh
-   ExecStart=/home/pi/TC2-BBS-mesh/venv/bin/python3 /home/pi/TC2-BBS-mesh/server.py
-   ```
-   
-   The file is currently setup for a user named 'pi' and assumes that the TC2-BBS-mesh directory is located in the home directory (which it should be if the earlier directions were followed)
-   
-   We just need to replace the 4 parts that have "pi" in those 3 lines with your username.
-
-2. **Configuring systemd**
-   
-   From the TC2-BBS-mesh directory, run the following commands:
-   
-   ```sh
-   sudo cp mesh-bbs.service /etc/systemd/system/
-   ```
-   
-   ```sh
-   sudo systemctl enable mesh-bbs.service
-   ```
-   
-   ```sh
-   sudo systemctl start mesh-bbs.service
-   ```
-   
-   The service should be started now and should start anytime your device is powered on or rebooted. You can check the status of the service by running the following command:
-   
-   ```sh
-   sudo systemctl status mesh-bbs.service
-   ```
-   
-   If you need to stop the service, you can run the following:
-   
-   ```sh
-   sudo systemctl stop mesh-bbs.service
-   ```
-   
-   If you need to restart the service, you can do so with the following command:
-   
-   ```sh
-   sudo systemctl restart mesh-bbs.service
-   ```
-
-2. **Viewing Logs**
-
-   Viewing past logs:
-   ```sh
-   journalctl -u mesh-bbs.service
-   ```
-
-   Viewing live logs:
-   ```sh
-   journalctl -u mesh-bbs.service -f
-   ```
+- While this is possible we won't focus on this, please refer to (https://github.com/TechTucson/TC2-BBS-mesh/blob/main/README.md)
 
 ## Radio Configuration
 
@@ -230,21 +166,6 @@ A video of it in use is available on our YouTube channel:
 
 [![TC²-BBS-Mesh](https://img.youtube.com/vi/d6LhY4HoimU/0.jpg)](https://www.youtube.com/watch?v=d6LhY4HoimU)
 
-
-
-## Thanks
-
-**Meshtastic:**
-
-Big thanks to [Meshtastic](https://github.com/meshtastic) and [pdxlocations](https://github.com/pdxlocations) for the great Python examples:
-
-[python/examples at master · meshtastic/python (github.com)](https://github.com/meshtastic/python/tree/master/examples)
-
-[pdxlocations/Meshtastic-Python-Examples (github.com)](https://github.com/pdxlocations/Meshtastic-Python-Examples)
-
-**JS8Call:**
-
-For the JS8Call side of things, big thanks to Jordan Sherer for JS8Call and the [example API Python script](https://bitbucket.org/widefido/js8call/src/js8call/tcp.py)
 
 ## License
 
