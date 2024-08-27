@@ -16,51 +16,31 @@
 
 
 ## Setup
-
+- Believe it or not, I am attempting to do this solely on a Windows Machine and port this at a future time to my SBCs Running Linux. Why Windows? Well it's running on a lot more things, Figured I'd try to make it easier on the entry-level folks giving things a try.
 ### Requirements
 
 - Python 3.x
+  - https://www.python.org/downloads/
 - Meshtastic
+  - I am Using Lora, but you are free to use any device you have or you'd like ( as long as they can run Meshtastic)
 - pypubsub
 
-### Update and Install Git
-   
-   ```sh
-   sudo apt update
-   sudo apt upgrade
-   sudo apt install git
-   ```
 
 ### Installation
 
 1. Clone the repository:
-   
-   ```sh
-   cd ~
-   git clone https://github.com/TheCommsChannel/TC2-BBS-mesh.git
-   cd TC2-BBS-mesh
+```
+git clone https://github.com/TheCommsChannel/TC2-BBS-mesh.git
+cd TC2-BBS-mes
+```
+1. Set up a Python virtual environment:  
    ```
-
-2. Set up a Python virtual environment:  
-   
-   ```sh
-   python -m venv venv
-   ```
-
+  python -m venv venv
+```
 3. Activate the virtual environment:  
-   
-   - On Windows:  
-   
-   ```sh
+```
    venv\Scripts\activate  
-   ```
-   
-   - On macOS and Linux:
-   
-   ```sh
-   source venv/bin/activate
-   ```
-
+```
 4. Install the required packages:  
    
    ```sh
@@ -70,7 +50,7 @@
 5. Rename `example_config.ini`:
 
    ```sh
-   mv example_config.ini config.ini
+   cp example_config.ini config.ini
    ```
 
 6. Set up the configuration in `config.ini`:  
