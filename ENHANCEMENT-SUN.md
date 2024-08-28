@@ -25,15 +25,13 @@
   ```
 - Now we need to create a function that will generate the needed output. We'll add this function:
   ```
-  def handle_define_command(sender_id, interface):
+  def handle_suntime_command(sender_id, interface):
     latitude = 33.4484
     longitude = 112.0740
     sun = Sun(latitude, longitude)
-# Get today's sunrise and sunset in UTC
     today_sr = sun.get_sunrise_time()
     today_ss = sun.get_sunset_time()
     response_ss = "Sunrise and Sunset in Phoenix AZ WIll be Times in UTC"
-
     send_message(responsere_ss, sender_id, interface)
     send_message(str(today_sr) , sender_id, interface)
     send_message(str(today_ss) , sender_id, interface)
@@ -41,7 +39,15 @@
 
 
 ### message_processing.py
+- We'll first add our *handle_suntime_command* to the command_handlers import section
+  ``` from command_handlers import ( .....,handle_suntime_commnad)
+  ```
+- Now we'll add our menu item to the utilities_menu handlers.
+  ```
+utilities_menu_handlers = {
+    ....,
+    "d": handle_suntime_command
+}
 
-
-
+# That's it
 
