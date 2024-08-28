@@ -18,6 +18,11 @@
   ```
   from suntime import Sun, SunTimeException
   ```
+- Our build_menu needs some updating let's add :
+  ```
+        elif item.strip() == 'N':
+            menu_str += "Su[N]\n"
+  ```
   
 
 
