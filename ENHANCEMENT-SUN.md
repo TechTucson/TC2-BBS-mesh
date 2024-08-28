@@ -1,5 +1,9 @@
 # Let's now have the bot tell us Sunrise and Sunset Times. 
 
+### requirements.txt
+- We'll need to add *suntime* to the requirements.txt file that way when we do our pip install we ensure all dependencies are accounted for. 
+
+- 
 ### config.ini
 - Let's scroll down to the utilities_menu_items and add T
 - It should look something like this now:
