@@ -1,5 +1,9 @@
 # Let's have the BOT give us it's current time
 
+
+### requirements.txt
+- I don't know if this specific one is needed but we'll add datetime to the requirements.txt
+
 ### config.ini
 - Let's scroll down to the utilities_menu_items and add T
 - It should look something like this now:
