@@ -18,8 +18,7 @@
   
 ### command_handlers.py
 
-    ```
-
+   
 
 ### message_processing.py
 
