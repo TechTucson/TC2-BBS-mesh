@@ -10,6 +10,8 @@
 - TC²-BBS already comes with the essentials which include a BBS, Mail, and even JS8 Integration. The Integrations that I am thinking about at the moment are:
   - Adding a Bot that tells you the time.
   - Adding a Bot that tells you the sunset/sunrise.
+  - Adding a Dictionary
+    - This one is a bit tricky ( at least for me) Definitions are more than the length allowed in a single message. Proof of concept will be to display the first X characters of the definition with follow-up work to send the entire definition in chunks.   
   - Adding some sort of ADSB Functionality
   - Adding some sort of APRS Functionality
 - Subsequent README files as well as examples will be added for each of these enhancements 
