@@ -27,7 +27,7 @@
    ```
      - This allows the Menu item *D* to be added to the Menus.
 - Now we'll need to create our own function to do what we want it to do.
-    ```
+````
 def handle_channel_dictionary_command(sender_id, interface):
     response = "📚 DICTIONARY📚 Press P to send word"
     send_message(response, sender_id, interface)
