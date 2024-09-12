@@ -28,7 +28,6 @@
      - This allows the Menu item *D* to be added to the Menus.
 - Now we'll need to create our own function to do what we want it to do.
     ```
-    #MARIO START
 def handle_channel_dictionary_command(sender_id, interface):
     response = "📚 DICTIONARY📚 Press P to send word"
     send_message(response, sender_id, interface)
@@ -74,14 +73,7 @@ def handle_channel_dictionary_steps(sender_id, message, step, state, interface):
         send_message(output2, sender_id, interface)
         
 
- #   elif step == 4:
- #       channel_url = message
- #       channel_name = state['channel_name']
- #       add_channel(channel_name, channel_url)
- #       send_message(f"Your channel '{channel_name}' has been added to the directory.", sender_id, interface)
- #       handle_channel_dictionary_command(sender_id, interface)
 
-# MARIO END
 ```
 
 ### message_processing.py
