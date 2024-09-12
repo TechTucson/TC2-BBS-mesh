@@ -19,10 +19,10 @@
 ### command_handlers.py
 
 
-  - Let's start by adding at the very top of the document 
-   ```
-   import json
-   ```
+- Let's start by adding at the very top of the document 
+ ```
+ import json
+ ```
 
  - Let's add an entry to the def(build_menu) function that will conincide with our *T*. Place it in between anything you'd like for now. 
    ```
@@ -30,7 +30,7 @@
             menu_str += "[D]efine\n"
    ```
      - This allows the Menu item *D* to be added to the Menus.
-- Now we'll need to create our own function to do what we want it to do.
+- Now we'll need to create our two new functions to do what we want it to do. One wil lhandle the actual message and the other will handle the steps within the message. 
   ````
   def handle_channel_dictionary_command(sender_id, interface):
       response = "📚 DICTIONARY📚 Press P to send word"
