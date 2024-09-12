@@ -81,15 +81,15 @@
   ```
 
 ### message_processing.py
-- Next is to add the function we defined into the message_processing.py, to do this we'll tack on the that import task *from command_handlers import ()* and add our two dunctions
+- Next is to add the function we defined into the message_processing.py, to do this we'll tack on the that import task *from command_handlers import ()* and add our two functions
   ```
-  from command_handlers import (.....,handle_time_command)
+  from command_handlers import (.....,handle_channel_dictionary_command, handle_channel_dictionary_steps)
   ```
-- Under the utilties_menu_handlers we'll also want to add out *t*.
+- Under the utilties_menu_handlers we'll also want to add our *d*.
   ```
   utilities_menu_handlers = {
   ....
-  "t": handle_time_command
+  "d": handle_dictionary_command
   }
   ```
     - This tells the BOT that if we get a message with the letter *t* we are to use the handle_time_command function that we imported.
