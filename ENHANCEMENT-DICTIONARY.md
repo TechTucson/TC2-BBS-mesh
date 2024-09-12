@@ -92,7 +92,10 @@
   "d": handle_dictionary_command
   }
   ```
-    - This tells the BOT that if we get a message with the letter *t* we are to use the handle_time_command function that we imported.
+ - Find a place to throw this in, 
+
+ elif command == 'CHANNEL_DICTIONARY':
+                   handle_channel_dictionary_steps(sender_id, message, step, state, interface)
 
 
 # That's it
