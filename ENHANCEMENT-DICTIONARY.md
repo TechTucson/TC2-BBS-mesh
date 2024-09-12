@@ -18,7 +18,11 @@
   
 ### command_handlers.py
 
-- Let's start by adding at the very top of the document 
+
+  - Let's start by adding at the very top of the document 
+   ```
+   import json
+   ```
 
  - Let's add an entry to the def(build_menu) function that will conincide with our *T*. Place it in between anything you'd like for now. 
    ```
