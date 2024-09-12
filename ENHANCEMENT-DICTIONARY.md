@@ -93,9 +93,17 @@
   }
   ```
  - Find a place to throw this in, 
-
+```
  elif command == 'CHANNEL_DICTIONARY':
                    handle_channel_dictionary_steps(sender_id, message, step, state, interface)
+```
+   - You can throw if after the Channel-Directory elif
+     ```
+                     elif command == 'CHANNEL_DIRECTORY':
+                    handle_channel_directory_steps(sender_id, message, step, state, interface)
+                elif command == 'CHANNEL_DICTIONARY':
+                   handle_channel_dictionary_steps(sender_id, message, step, state, interface)
+     ```   
 
 
 # That's it
