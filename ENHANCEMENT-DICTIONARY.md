@@ -27,54 +27,54 @@
    ```
      - This allows the Menu item *D* to be added to the Menus.
 - Now we'll need to create our own function to do what we want it to do.
-````
-def handle_channel_dictionary_command(sender_id, interface):
-    response = "📚 DICTIONARY📚 Press P to send word"
-    send_message(response, sender_id, interface)
-    update_user_state(sender_id, {'command': 'CHANNEL_DICTIONARY', 'step': 1})
-
-
-def handle_channel_dictionary_steps(sender_id, message, step, state, interface):
-    message = message.lower().strip()
-    if len(message) == 2 and message[1] == 'x':
-        message = message[0]
-
-    if step == 1:
-        choice = message
-        if choice == 'x':
-            response = "From Within Dictionary Block"
-            send_message(response, sender_id, interface)
-            return
-        elif choice == 'p':
-            send_message("Send the word you want to define:", sender_id, interface)
-            update_user_state(sender_id, {'command': 'CHANNEL_DICTIONARY', 'step': 3})
-
-    elif step == 2:
-        channel_index = int(message)
-        channels = get_channels()
-        if 0 <= channel_index < len(channels):
-            channel_name, channel_url = channels[channel_index]
-            send_message(f"Channel Name: {channel_name}\nChannel URL:\n{channel_url}", sender_id, interface)
-        handle_channel_dictionary_command(sender_id, interface)
-
-    elif step == 3:
-        word = message
-        with open('dictionary.json', 'r') as file:
-           data = json.load(file)
-        output = (data[word])
-        lenght = (str(len(output)))
-        #output2 = output[:output.index("2")]  
-        output1 = output[:50]  
-        output2 = output[50:100]          
-        #send_message(word, sender_id, interface)
-        send_message(output2, sender_id, interface)
-        send_message("The Lenght is" + lenght, sender_id, interface)
-        send_message(output1, sender_id, interface)
-        send_message(output2, sender_id, interface)
-        
-
-
-```
+  ````
+  def handle_channel_dictionary_command(sender_id, interface):
+      response = "📚 DICTIONARY📚 Press P to send word"
+      send_message(response, sender_id, interface)
+      update_user_state(sender_id, {'command': 'CHANNEL_DICTIONARY', 'step': 1})
+  
+  
+  def handle_channel_dictionary_steps(sender_id, message, step, state, interface):
+      message = message.lower().strip()
+      if len(message) == 2 and message[1] == 'x':
+          message = message[0]
+  
+      if step == 1:
+          choice = message
+          if choice == 'x':
+              response = "From Within Dictionary Block"
+              send_message(response, sender_id, interface)
+              return
+          elif choice == 'p':
+              send_message("Send the word you want to define:", sender_id, interface)
+              update_user_state(sender_id, {'command': 'CHANNEL_DICTIONARY', 'step': 3})
+  
+      elif step == 2:
+          channel_index = int(message)
+          channels = get_channels()
+          if 0 <= channel_index < len(channels):
+              channel_name, channel_url = channels[channel_index]
+              send_message(f"Channel Name: {channel_name}\nChannel URL:\n{channel_url}", sender_id, interface)
+          handle_channel_dictionary_command(sender_id, interface)
+  
+      elif step == 3:
+          word = message
+          with open('dictionary.json', 'r') as file:
+             data = json.load(file)
+          output = (data[word])
+          lenght = (str(len(output)))
+          #output2 = output[:output.index("2")]  
+          output1 = output[:50]  
+          output2 = output[50:100]          
+          #send_message(word, sender_id, interface)
+          send_message(output2, sender_id, interface)
+          send_message("The Lenght is" + lenght, sender_id, interface)
+          send_message(output1, sender_id, interface)
+          send_message(output2, sender_id, interface)
+          
+  
+  
+  ```
 
 ### message_processing.py
 
