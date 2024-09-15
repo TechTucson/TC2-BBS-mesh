@@ -23,7 +23,15 @@
     ```
   - 2.2 Double click the bat file and  you should now get some output on the Command Prompt Looking window
 - 3 Take a look at the website http
-
+- 4 Let's setup adsb-stats logger
+  - 4.1 Download and extract
+  - 4.2 Create and Activate Python Virtual Environet
+      ```
+      python -m venv venv
+      venv\Scripts\activate 
+      ```
+  - 4.3 Modify logger.py
+  - Move logger.py and search.py into the Meshtastic folder we have been using. 
 
 
 
