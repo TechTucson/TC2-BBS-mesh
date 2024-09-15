@@ -27,8 +27,10 @@
 - Meshtastic
   - I am Using Lora, but you are free to use any device you have or you'd like ( as long as they can run Meshtastic)
 - pypubsub
-- https://github.com/gvanem/Dump1090 (We'll use this for the ADSB Portion)
-- RTL-SDR V3 
+- ADSB
+  - https://github.com/gvanem/Dump1090
+  - RTL-SDR V3
+  - https://github.com/nfacha/adsb-stats-logger/
 
 
 ### Installation
