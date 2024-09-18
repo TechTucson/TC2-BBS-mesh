@@ -32,8 +32,9 @@
       venv\Scripts\activate 
       ```
   - 4.3 Modify logger.py
-      - As-is the adsb-stats-logger uses a local file which I didn't want to figure out how DUMP1090 generates it. DUMP1090 
-    - 4.3.1 Modify show.py 
+      - As-is the adsb-stats-logger uses a local file which I didn't want to figure out how DUMP1090 generates it. DUMP1090's --net functionality exposes a JSON file we will use to feed our ADSB logger as mentioned above. The logger.py takes that JSON file exposed on your local web server through HTTP and adds data points to an SQLITE Database. 
+    - 4.3.1 Modify show.py
+      - 4.3.1.1 For our Proof of Concept we are focusing on the latest Aircraft seen to send out the message within BBMesh. When we run show.py we'll get data we need. 
   - 4.4 Move logger.py and search.py into the Meshtastic folder we have been using.
   - 4.5 Add requirements from adsb-stats-logger for Python over to our main project requirements.txt file
 
