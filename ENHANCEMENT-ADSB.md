@@ -22,16 +22,20 @@
     dump1090.exe --interactive --net
     ```
   - 2.2 Double click the bat file and  you should now get some output on the Command Prompt Looking window
+  - 2.3 While we don't need the --interactive part it's easy to see something on the screen, we will use the --net function. --net will enable a local web server where you can visit and interact with a service even use a map. The specific functionality we are after is a JSON file created continuously, we'll use this file to feed our ADSB logger.  
 - 3 Take a look at the website http
 - 4 Let's setup adsb-stats logger
   - 4.1 Download and extract
-  - 4.2 Create and Activate Python Virtual Environet
+  - 4.2 Create and Activate Python Virtual Environment
       ```
       python -m venv venv
       venv\Scripts\activate 
       ```
   - 4.3 Modify logger.py
-  - Move logger.py and search.py into the Meshtastic folder we have been using. 
+      - As-is the adsb-stats-logger uses a local file which I didn't want to figure out how DUMP1090 generates it. DUMP1090 
+    - 4.3.1 Modify show.py 
+  - 4.4 Move logger.py and search.py into the Meshtastic folder we have been using.
+  - 4.5 Add requirements from adsb-stats-logger for Python over to our main project requirements.txt file
 
 
 
